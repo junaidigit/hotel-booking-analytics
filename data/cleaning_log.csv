@@ -1,0 +1,15 @@
+Step,Action,Detail,Rows affected
+1,Load,Bookings table loaded (raw rows),119390
+2,Check keys,"All foreign keys match lookup tables (Hotel, Segment, Customer Type, Reservation)",0
+3,Missing values,children blank -> 0,4
+4,Missing values,"country blank -> ""UNK"" (Unknown)",488
+5,Missing values,"agent blank -> 0 = ""No agent"" (booked without travel agent)",16340
+6,Missing values,"company blank -> 0 = ""No company"" (not a corporate booking)",112593
+7,Remove invalid,Bookings with 0 guests (adults+children+babies=0),180
+8,Remove invalid,Negative ADR,1
+9,Remove outlier,"ADR above 1,000 (single 5,400 entry error)",1
+10,Check duplicates,"Identical rows (excluding Booking_ID) kept: there is no guest ID, so they are most likely separate rooms in the same group booking.",32995
+11,Check consistency,is_canceled matches reservation status (1 = Canceled/No-Show),0
+12,Feature engineering,"Added arrival_date, booking_date, total_nights, total_guests, has_kids, booking_value, realised_revenue, lost_revenue, lead_time_band, stay_length_band, season, weekday, has_agent, has_company flags",119208
+13,Final,Clean fact table rows,119208
+14,Final,Rows removed in total,182
