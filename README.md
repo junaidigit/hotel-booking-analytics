@@ -1,4 +1,4 @@
-https://<your-username>.github.io/hotel-booking-analytics/dashboards/hotel_dashboard.html
+https://junaidi.github.io/hotel-booking-analytics/dashboards/hotel_dashboard.html
 # Hotel Booking Analytics – Reducing Cancellation Losses
 
 **Business Analytics capstone project** · Python · Excel · Power BI
